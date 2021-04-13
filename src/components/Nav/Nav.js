@@ -4,6 +4,7 @@ import { LAYOUT } from "../../styles/constants"
 import { Text } from "../../styles/typo"
 import { Container } from "../../styles/layout"
 import Hamburger from "./Hamburger"
+import Toggle from "../darkMode"
 
 const NavContainer = styled.div `
     position: fixed;
@@ -23,7 +24,7 @@ const NavContainer = styled.div `
     }
 `
 
-const Nav = () => {
+const Nav = ({theme, toggleTheme}) => {
 
     const [prevScrollPos, setPrevScrollPos] = useState(0)
     const [visible, setVisible] = useState(true)
@@ -60,6 +61,7 @@ const Nav = () => {
             <Container centerFull>
                 <Text dark uppercase wide>STICKY HEADER</Text>
                 <Hamburger />
+                <Toggle theme={theme} toggleTheme={toggleTheme} />
             </Container>
         </NavContainer>
     )

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from "styled-components"
 import { LAYOUT, mq } from "../../styles/constants"
+import { HiMenu, HiOutlineX } from "react-icons/hi"
 
 const Burger = styled.div `
     position: absolute;
@@ -13,9 +14,7 @@ const Burger = styled.div `
     justify-content: start;
     align-items: center;
     svg {
-        height: 2rem;
         stroke: var(--clr-dark);
-        stroke-width: 2;
         opacity: 1;
         transform: translateX(0);
         transition: all ${LAYOUT.transition} ease-in-out;
@@ -46,9 +45,7 @@ const SideNav = styled.div `
         position: absolute;
         top: var(--spacer);
         right: var(--spacer);
-        height: 2rem;
         stroke: var(--clr-dark);
-        stroke-width: 2; 
         cursor: pointer; 
     };
     &.open {
@@ -75,14 +72,10 @@ const Hamburger = () => {
 return (
     <div>  
         <Burger onClick={handleBurger}>
-            <svg className={burger ? "close" : ""} fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
+            <HiMenu size="2rem" className={burger ? "close" : ""} />
         </Burger>
         <SideNav className={burger ? "open" : ""}>
-            <svg onClick={handleBurger} fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
+            <HiOutlineX size="2rem" onClick={handleBurger} />
         </SideNav >
     </div>
 )

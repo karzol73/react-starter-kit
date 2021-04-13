@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import { reset } from 'styled-reset-advanced'
-import { COLORS, LAYOUT, TYPESCALE, mq } from "./constants"
+import { LAYOUT, TYPESCALE, mq } from "./constants"
 
 
 const GlobalStyles = createGlobalStyle `
@@ -13,9 +13,9 @@ const GlobalStyles = createGlobalStyle `
     
     html {
     height: 100%;
-    --clr-light: ${COLORS.light};
-    --clr-dark: ${COLORS.dark};
-    --clr-colored: ${COLORS.colored};
+    --clr-light: ${({ theme }) => theme.light};
+    --clr-dark: ${({ theme }) => theme.dark};
+    --clr-colored: ${({ theme }) => theme.colored};
     --margin: ${LAYOUT.small.margin};
     --spacer: ${LAYOUT.small.spacer};
     --border: ${LAYOUT.small.border};

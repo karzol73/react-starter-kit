@@ -1,9 +1,3 @@
-const COLORS = {
-    light: "hsl(77, 11%, 95%)",
-    dark: "hsl(169, 10%, 25%)",
-    colored: "hsl(205, 99% ,40%)"
-}
-
 const LAYOUT = {
     small: {
         margin: "1.5rem",
@@ -57,4 +51,4 @@ const mq = {
     xxl: `@media(min-width: ${SIZE.xxl})`  
 }
 
-export { COLORS, LAYOUT, SIZE, TYPESCALE, TYPEFACE, mq }
+export { LAYOUT, SIZE, TYPESCALE, TYPEFACE, mq }
