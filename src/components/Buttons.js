@@ -6,15 +6,15 @@ function Buttons () {
     return (
         <Container>
             <Button framed>
-                <a href="/">Light Button</a>
+                <a href="#">Light Button</a>
             </Button>
             <Divider />
             <Button>
-                <a href="/">Dark Button</a>
+                <a href="#">Dark Button</a>
             </Button>
             <Divider />
             <Button colored>
-                <a href="/">Colored Button</a>
+                <a href="#">Colored Button</a>
             </Button>
             <Divider large />
         </Container>

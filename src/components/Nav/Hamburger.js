@@ -41,6 +41,7 @@ const SideNav = styled.div `
     box-shadow: 5px 0px 15px 0px rgba(50, 50, 46, 0.26);
     transition: all ${LAYOUT.transition} ease-in-out;
     overflow-y: hidden;
+    z-index: 1000;
     svg {
         position: absolute;
         top: var(--spacer);

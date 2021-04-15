@@ -22,9 +22,9 @@ function Typo () {
             <Divider small />
             <Text dark justify>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus obcaecati modi provident exercitationem deserunt, temporibus assumenda quaerat quos ipsam pariatur harum beatae expedita omnis repellat recusandae error nobis suscipit non ea sunt? Ad temporibus ipsam eligendi placeat ab dolor eius voluptates nostrum rerum iusto molestias unde repellendus in, aperiam sunt facilis veniam similique minima cumque quam soluta accusamus illo non ratione. Tempore consequatur nemo amet accusamus rem error tenetur excepturi cumque facilis cupiditate! Ut laboriosam fugit facilis quos quae magnam fugiat, ducimus magni nesciunt autem, rem doloremque. Minus doloribus ipsam eligendi repellendus eos eum sapiente dolorum. Velit nihil beatae magni.</Text>
             <Divider small />
-            <Link colored bold href= "/">Just a simple link.</Link>
+            <Link colored bold href= "#">Just a simple link.</Link>
             <Divider small />
-            <Link colored bold animated href= "/">Animated link.</Link>
+            <Link colored bold animated href= "#">Animated link.</Link>
         </Container>
     )
 }

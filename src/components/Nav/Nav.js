@@ -6,7 +6,7 @@ import { Container } from "../../styles/layout"
 import Hamburger from "./Hamburger"
 import Toggle from "../darkMode"
 
-const NavContainer = styled.div `
+const NavContainer = styled.div`
     position: fixed;
     top: -70px;
     left: 0;
@@ -24,16 +24,16 @@ const NavContainer = styled.div `
     }
 `
 
-const Nav = ({theme, toggleTheme}) => {
+const Nav = ({ theme, toggleTheme }) => {
 
     const [prevScrollPos, setPrevScrollPos] = useState(0)
     const [visible, setVisible] = useState(true)
-    
+
     function debounce(func, wait, immediate) {
         var timeout
-        return function() {
+        return function () {
             var context = this, args = arguments
-            var later = function() {
+            var later = function () {
                 timeout = null
                 if (!immediate) func.apply(context, args)
             }
@@ -48,13 +48,13 @@ const Nav = ({theme, toggleTheme}) => {
         const currentScrollPos = window.pageYOffset
         setVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70) || currentScrollPos < 10)
         setPrevScrollPos(currentScrollPos)
-    
+
     }, 100)
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll)
-      }, [prevScrollPos, visible, handleScroll])
+    }, [prevScrollPos, visible, handleScroll])
 
     return (
         <NavContainer className={visible ? "visible" : ""}>
