@@ -32,7 +32,7 @@ export const useDarkMode = () => {
   return [theme, toggleTheme, componentMounted]
 }
 
-const Switcher = styled.div `
+const Switch = styled.div `
   cursor: pointer;
   position: absolute;
   top: 0;
@@ -49,9 +49,9 @@ const Toggle = ({ theme, toggleTheme }) => {
   //const isLight = theme === 'LIGHT'
 
   return (
-    <Switcher onClick={toggleTheme} >
+    <Switch onClick={toggleTheme} >
       {theme === "LIGHT" ? < HiOutlineMoon size ="2rem"/> : < HiOutlineSun size ="2rem"/>}
-    </Switcher>
+    </Switch>
     
   )
 }
